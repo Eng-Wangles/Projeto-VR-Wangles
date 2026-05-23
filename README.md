@@ -1,4 +1,4 @@
-# 🚀 Oficina de Hardware VR
+# 🚀 Loja Imersiva de Hardware VR
 
 Projeto de Realidade Virtual desenvolvido na Unity com foco na criação de uma loja virtual imersiva especializada em equipamentos e componentes de informática.
 
