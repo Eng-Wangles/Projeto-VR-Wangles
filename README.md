@@ -1,4 +1,3 @@
-```markdown
 # 🪑 Projeto VR – Loja de Hardware
 
 ## Loja Virtual Imersiva de Hardware com Interatividade em Realidade Virtual
