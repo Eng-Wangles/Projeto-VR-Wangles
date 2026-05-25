@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Oficina de Hardware.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
+    com.unity.adaptivePerformance.basic.provider_settings: {fileID: 11400000, guid: 499bf560516288e498496fc4172eb79c, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 1c6e7f702d1498543a8bcd2b80c15613, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 46d4af2f6e268ad4ba019cf550092b48, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 6ea8cd05c42dd7042b96c21fb5c635ad, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 9caa181120cbf7f48b85dbd0d0ee280f, type: 2}
