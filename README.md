@@ -140,11 +140,7 @@ Também foi preparado para futura utilização em dispositivos VR compatíveis c
 
 ## Passos
 
-1. Clone o repositório:
-
-```bash
-git clone [LINK_DO_REPOSITORIO]
-```
+1. Clone o repositório;
 
 2. Abra o projeto na Unity;
 
