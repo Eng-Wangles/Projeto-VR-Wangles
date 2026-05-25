@@ -1,199 +1,340 @@
-# 🚀 Loja Imersiva de Hardware VR
+```markdown
+# 🪑 Projeto VR – Loja de Hardware
 
-Projeto de Realidade Virtual desenvolvido na Unity com foco na criação de uma loja virtual imersiva especializada em equipamentos e componentes de informática.
-
-O ambiente permite que o usuário explore uma loja tecnológica em primeira pessoa, visualizando diversos produtos expostos em vitrines virtuais dentro de um cenário 3D navegável.
-
----
-
-# 📸 Visão Geral
-
-A cena foi construída utilizando um ambiente cúbico composto por:
-
-* Piso texturizado;
-* 3 paredes estruturais;
-* 3 mostruários centrais;
-* 3 vitrines transparentes;
-* Área gamer personalizada;
-* Skybox com ambientação externa;
-* Iluminação dinâmica.
-
-O cenário foi desenvolvido para simular uma loja moderna de hardware e tecnologia.
+## Loja Virtual Imersiva de Hardware com Interatividade em Realidade Virtual
 
 ---
 
-# 🖥️ Equipamentos Presentes na Loja
+## 📌 Índice
 
-O ambiente contém diversos equipamentos e componentes de informática, incluindo:
-
-* Monitores;
-* Notebooks;
-* Desktops gamers;
-* Teclados mecânicos;
-* Controles de console;
-* Processadores;
-* Memórias RAM;
-* Placas de vídeo;
-* Roteadores;
-* Impressora 3D;
-* Placas-mãe;
-* Equipamentos gamers;
-* Rack para servidores.
+- [Visão Geral](#visão-geral)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Estrutura do Ambiente](#estrutura-do-ambiente)
+- [Funcionalidades](#funcionalidades)
+- [Interatividade: Cadeira Gamer](#interatividade-cadeira-gamer)
+- [Pré-requisitos](#pré-requisitos)
+- [Instalação e Configuração](#instalação-e-configuração)
+- [Como Testar](#como-testar)
+- [Controles](#controles)
+- [Estrutura de Arquivos](#estrutura-de-arquivos)
+- [Próximos Passos](#próximos-passos)
+- [Links Importantes](#links-importantes)
+- [Créditos](#créditos)
 
 ---
 
-# 🧩 Modelos 3D Utilizados
+## 🎯 Visão Geral
 
-Foram utilizados **28 modelos 3D importados do Sketchfab** para construção do ambiente virtual.
+Este projeto consiste no desenvolvimento de um **ambiente imersivo em Realidade Virtual (VR)** utilizando a engine **Unity**, com foco na simulação de uma **loja virtual especializada em equipamentos e componentes de informática**.
 
-Os assets foram utilizados para enriquecer a experiência visual e criar um ambiente mais realista e imersivo.
-
----
-
-# 🛠️ Tecnologias Utilizadas
-
-| Tecnologia           | Descrição                        |
-| -------------------- | -------------------------------- |
-| Unity                | Engine principal do projeto      |
-| Meta XR SDK          | Integração com Realidade Virtual |
-| XR Plugin Management | Gerenciamento XR                 |
-| C#                   | Scripts e funcionalidades        |
-| Sketchfab            | Fonte dos modelos 3D             |
-| GitHub               | Versionamento do projeto         |
+O usuário pode explorar livremente a loja em primeira pessoa, visualizar produtos expostos em vitrines virtuais e interagir com elementos do cenário, como a **cadeira gamer animada**, que reage à presença do jogador.
 
 ---
 
-# 🎮 Funcionalidades
+## 🛠️ Tecnologias Utilizadas
 
-* Navegação em primeira pessoa;
-* Ambiente VR navegável;
-* Organização de produtos em vitrines;
-* Ambientação imersiva;
-* Estrutura preparada para Meta Quest;
-* Compatibilidade inicial com XR.
+| Tecnologia | Finalidade |
+|------------|------------|
+| **Unity 6 LTS** | Desenvolvimento do ambiente VR |
+| **Meta XR SDK** | Recursos de Realidade Virtual e compatibilidade com Quest |
+| **XR Plugin Management** | Gerenciamento multiplataforma XR |
+| **OpenXR** | Padrão aberto para desenvolvimento VR |
+| **Sketchfab** | Fonte dos modelos 3D |
+| **C#** | Scripts e funcionalidades interativas |
+| **GitHub** | Versionamento do projeto |
 
 ---
 
-# 🗂️ Estrutura do Projeto
+## 🏗️ Estrutura do Ambiente
 
-```text
-Assets/
- ├── Materials/
- ├── Models/
- ├── Oculus/
- ├── Plugins/
- ├── Resources/
- ├── Scenes/
- ├── Settings/
- ├── SkySeries/
- ├── Textures/
- ├── XR/
- └── Scripts/
+O ambiente foi projetado no formato **cúbico**, simulando uma grande loja de informática.
+
+### Componentes da Cena:
+
+| Elemento | Quantidade |
+|----------|------------|
+| Piso principal texturizado | 1 |
+| Paredes estruturais | 3 |
+| Mostruários centrais retangulares | 3 |
+| Vitrines transparentes | 3 |
+| Área gamer temática | 1 |
+| Produtos expostos | 28+ |
+
+### Distribuição dos Produtos:
+
+- **Monitores, notebooks e desktops**
+- **Teclados mecânicos e controles**
+- **Placas de vídeo, memórias RAM e processadores**
+- **Roteadores, impressoras 3D e placas-mãe**
+- **Componentes eletrônicos diversos**
+
+### Área Gamer:
+
+- Rack para servidores
+- Cadeira gamer (com animação interativa)
+- Mesa de escritório
+- Desktop gamer
+- Teclado e monitor gamer
+
+---
+
+## ✨ Funcionalidades
+
+| Funcionalidade | Descrição |
+|----------------|-----------|
+| **Navegação livre** | Explore a loja caminhando em primeira pessoa |
+| **Visualização de produtos** | Observe itens expostos em vitrines e mostruários |
+| **Interatividade** | Aproxime-se da cadeira gamer para ativar animação |
+| **Compatibilidade XR** | Preparado para Meta Quest via Link Cable ou build nativo |
+| **Ambientação imersiva** | Skybox, iluminação dinâmica e materiais realistas |
+
+---
+
+## 🪑 Interatividade: Cadeira Gamer
+
+A cadeira localizada na área gamer reage à presença do jogador:
+
+| Ação do Usuário | Resposta |
+|-----------------|----------|
+| Aproxima-se | Animação de abertura (gira/desliza) |
+| Afasta-se | Animação de fechamento (movimento reverso) |
+
+### Script de Controle (`ChairTrigger.cs`):
+
+```csharp
+using UnityEngine;
+
+public class ChairTrigger : MonoBehaviour
+{
+    private Animator meuAnimator;
+
+    void Start()
+    {
+        meuAnimator = GetComponent<Animator>();
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            meuAnimator?.SetBool("isPlayerNear", true);
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            meuAnimator?.SetBool("isPlayerNear", false);
+        }
+    }
+}
+```
+
+### Configuração do Animator:
+
+| Parâmetro | Tipo | Uso |
+|-----------|------|-----|
+| `isPlayerNear` | Bool | Controla abertura/fechamento |
+
+**Transições:**
+
+| Origem → Destino | Condição | Has Exit Time |
+|------------------|----------|---------------|
+| Idle → Chair Open | `isPlayerNear = true` | ❌ OFF |
+| Chair Open → Chair Close | `isPlayerNear = false` | ❌ OFF |
+| Chair Close → Idle | (sem condição) | ✅ ON (Exit Time: 1) |
+
+---
+
+## 📋 Pré-requisitos
+
+### Para desenvolvimento:
+
+| Item | Especificação |
+|------|---------------|
+| **Sistema Operacional** | Windows 10/11 64-bit |
+| **Unity** | 6 LTS (6000.3.13f1 ou superior) |
+| **GPU** | NVIDIA GTX 1060+ ou equivalente |
+| **RAM** | 16 GB ou mais |
+| **SDK** | Meta XR SDK instalado via Unity Package Manager |
+
+### Para teste em headset (opcional):
+
+| Item | Especificação |
+|------|---------------|
+| **Headset** | Meta Quest 2, 3 ou Pro |
+| **Cabo** | USB-C de alta velocidade (para Link Cable) |
+| **Conta** | Meta Developer account ativada |
+
+---
+
+## 🔧 Instalação e Configuração
+
+### 1. Clonar o repositório
+
+```bash
+git clone https://github.com/Eng-Wangles/Projeto-VR-Wangles.git
+cd Projeto-VR-Wangles
+```
+
+### 2. Abrir no Unity
+
+- Abra o **Unity Hub**
+- Clique em **"Open Project"** → Selecione a pasta clonada
+- Aguarde a importação dos assets e pacotes
+
+### 3. Configurar XR
+
+1. **Edit → Project Settings → XR Plug-in Management**
+2. Marque **OpenXR** para a plataforma desejada (Windows/Android)
+3. Certifique-se de que **Meta XR** está listado
+
+### 4. Configurar qualidade (opcional)
+
+```
+Edit → Project Settings → Quality
+├─ Texture Quality: Full Res
+├─ Anti Aliasing: 4x
+└─ Master Texture Limit: No Limit
+```
+
+### 5. Verificar a tag do player
+
+1. Selecione `[BuildingBlock] Camera Rig` na Hierarchy
+2. No Inspector, configure **Tag → Player**
+3. Crie a tag "Player" se necessário
+
+---
+
+## 🎮 Como Testar
+
+### Opção 1: No Editor (teclado e mouse)
+
+1. Clique em **Play (►)**
+2. Use as teclas **WASD** para movimentação
+3. Aproxime-se da cadeira gamer para testar a animação
+
+### Opção 2: Meta Quest Link Cable (recomendado)
+
+1. Conecte o Quest ao PC via cabo USB-C
+2. Ative **Quest Link** no headset
+3. No PC, abra o **Meta Horizon Link** e defina como OpenXR Runtime
+4. No Unity, clique em **Play (►)**
+5. Coloque o headset e teste em tempo real
+
+### Opção 3: Build para Android/Quest
+
+```
+File → Build Settings
+├─ Platform: Android
+├─ Run Device: Seu Quest
+└─ Build and Run
 ```
 
 ---
 
-# 🧱 Estrutura da Cena
+## 🎮 Controles
 
-```text
-Oficina de Hardware
- ├── Camera Rig
- ├── Directional Light
- ├── Cenario
- │    ├── Piso
- │    ├── Parede
- │    ├── Expositor
- │    └── GameObjects
+### Navegação no Editor (teclado/mouse):
+
+| Tecla | Ação |
+|-------|------|
+| `WASD` | Movimentação |
+| `Mouse` | Olhar ao redor |
+
+### Interação:
+
+| Ação | Resultado |
+|------|-----------|
+| Aproximar-se da cadeira | Animação de abertura |
+| Afastar-se da cadeira | Animação de fechamento |
+
+---
+
+## 📂 Estrutura de Arquivos
+
+```
+Projeto-VR-Wangles/
+├── Assets/
+│   ├── Animation/
+│   │   ├── Chair Open.anim
+│   │   ├── Chair Close.anim
+│   │   └── GameChair Animation.controller
+│   ├── Scripts/
+│   │   └── ChairTrigger.cs
+│   ├── Models/
+│   │   ├── GameChair.fbx
+│   │   └── ... (demais assets 3D)
+│   ├── Materials/
+│   ├── Textures/
+│   └── Scenes/
+│       └── Oficina de Hardware.unity
+├── ProjectSettings/
+├── Packages/
+└── README.md
 ```
 
 ---
 
-# 🌌 Ambientação
+## 🚀 Próximos Passos
 
-O ambiente utiliza:
-
-* Skybox atmosférica;
-* Iluminação direcional;
-* Sombras em tempo real;
-* Materiais texturizados;
-* Vitrines translúcidas.
-
-Esses elementos ajudam a aumentar a sensação de imersão no ambiente virtual.
+- [ ] Adicionar efeitos sonoros à animação da cadeira
+- [ ] Criar UI interativa com informações dos produtos
+- [ ] Adicionar multiplayer para visitação simultânea
+- [ ] Implementar sistema de compras virtual
+- [ ] Otimizar performance para mais assets
 
 ---
 
-# 🕹️ Navegação
+## 🔗 Links Importantes
 
-O projeto foi configurado inicialmente para funcionamento em computador utilizando teclado e mouse.
+| Link | Descrição |
+|------|-----------|
+| [GitHub do Projeto](https://github.com/Eng-Wangles/Projeto-VR-Wangles) | Repositório principal |
+| [Vídeo Demonstrativo](https://youtu.be/tQoa-xMJDg0) | Demonstração da loja virtual |
 
-Também foi preparado para futura utilização em dispositivos VR compatíveis com o Meta XR SDK.
 
----
+### Documentações de referência:
 
-# ⚙️ Como Executar o Projeto
-
-## Pré-requisitos
-
-* Unity instalada;
-* Meta XR SDK configurado;
-* XR Plugin Management habilitado.
-
-## Passos
-
-1. Clone o repositório;
-
-2. Abra o projeto na Unity;
-
-3. Abra a cena principal;
-
-4. Execute o projeto pelo botão Play.
+- [Unity Documentation](https://docs.unity3d.com/)
+- [Meta XR SDK Documentation](https://developer.oculus.com/documentation/unity/)
+- [Sketchfab](https://sketchfab.com/)
+- [Unity Learn](https://learn.unity.com/)
+- [Meta Developers](https://developer.oculus.com/)
 
 ---
 
-# 📈 Melhorias Futuras
+## 👨‍💻 Autor
 
-* Interação direta com os produtos;
-* Sistema de seleção de itens;
-* Interface VR;
-* Exibição de preços;
-* Carrinho virtual;
-* Sistema de teletransporte;
-* Áudio ambiente;
-* Compatibilidade completa com Meta Quest.
+**Wangles Moreira Soares**
+
+- 📧 soares.wangles@gmail.com
 
 ---
 
-# 📚 Objetivos do Projeto
+## 📄 Licença
 
-Este projeto foi desenvolvido com o objetivo de aplicar os conceitos fundamentais de:
-
-* Realidade Virtual (VR);
-* XR;
-* Ambientação 3D;
-* Navegação em primeira pessoa;
-* Organização de cenas na Unity;
-* Integração de assets 3D.
+Este projeto foi desenvolvido para fins educacionais e de demonstração de conceitos de Realidade Virtual.
 
 ---
 
-# 📌 Resultados Obtidos
+## 🙏 Créditos
 
-O projeto resultou em:
-
-✅ Ambiente VR funcional; 
-
-✅ Loja virtual imersiva; 
-
-✅ Organização eficiente da cena; 
-
-✅ Integração de múltiplos modelos 3D; 
-
-✅ Estrutura preparada para XR; 
-
-✅ Experiência visual coerente. 
+- Modelos 3D disponibilizados por criadores no [Sketchfab](https://sketchfab.com/)
+- Meta XR SDK por viabilizar o desenvolvimento VR
+- Unity por fornecer a plataforma de desenvolvimento
 
 ---
 
-# 👨‍💻 Autor
+## ⭐ Agradecimentos
 
-Wangles M. Soares
+Agradeço a todos os professore(a)s, mentore(a)s e orientadore(a)s do curso WEB 3.0 Metaverso!
+
+Feedbacks e contribuições são sempre bem-vindos.
+
+---
+
+**Versão:** 1.1  
+**Última atualização:** 25/05/2026
+```
